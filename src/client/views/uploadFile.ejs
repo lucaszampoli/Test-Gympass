@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang='pt-BR'>
+	<% include ../common/head %>
+	<% include ../common/header %>
+	<body>
+		<main style="margin-top: 1%">
+			<div class="row">
+				<div class="col-md-9 offset-md-1">
+					<div class="card col-md-12 offset-md-1">
+						<div class="card-title center">
+							 <h4><i class="fa fa-bars"></i><b> Importar Arquivo</b></h4>
+						</div>
+						<div class="card-content col-md-12">
+						   <form action="result" method="post" enctype="multipart/form-data" id="form">
+							 <input type="file" style="border: 1px solid silver" name="fileupload" id="fileupload"  accept=".txt, .log" class="btn btn-default" >
+							 <br /><br />
+							 	<button class="btn btn-primary" id="send-file" type="button">Importar arquivo</button>
+
+						</form>
+					</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+
+<script>
+// testa se o usuario selecionou algum arquivo antes de importar e informa o mesmo caso nao o tenha feito.
+$(document).ready(function() {
+ $('#send-file').click(function() {
+file = $('#fileupload')[0].files[0];
+
+if (typeof file === "undefined") {
+	swal({
+		title: "Nenhum arquivo foi selecionado",
+		text: "Selecione o arquivo para importação nos formatos (.txt, .log).",
+		showConfirmButton: true,
+		allowOutsideClick: false,
+		type:"warning"
+	});
+	return false;
+}
+ $('#form').submit();
+});
+});
+</script>
+	<%include ../common/footer %>
+
+</html>

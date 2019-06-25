@@ -1,0 +1,33 @@
+{
+  "name": "testgympass",
+  "version": "1.0.0",
+  "description": "Test-Gympass",
+  "main": "server.js",
+  "scripts": {
+    "test": "nyc --reporter=text mocha --exit",
+    "start": "nodemon"
+  },
+  "author": "Lucas Zampoli",
+  "license": "ISC",
+  "dependencies": {
+    "ajax-request": "^1.2.3",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.3.1",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "consign": "^0.1.6",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "formidable": "^1.2.1",
+    "jquery": "^3.4.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "nyc": "^13.1.0",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+	<% include ../common/head %>
+	<% include ../common/header %>
+
+	<body>
+		<main style="margin-top: 3%">
+			<div class="row">
+				<div class="col-md-9 offset-md-1">
+					<div class="card col-md-12 offset-md-1">
+						<div class="card-title center">
+							 <h4><i class="fa fa-car" style="font-size:24px"></i><b> Fórmula Kart</b></h4>
+						</div>
+						<div class="card-content col-md-12">
+							<p>
+								O programa lê um arquivo texto dos tipos .txt ou .log com as informações de uma corrida de kart,
+								após a leitura do mesmo o usúario será redirecionado a uma página contendo os resultados desta corrida
+							  com as seguintes informações:
+							</p>
+							<br>
+							<ul>
+								<li>Posição Chegada.</li>
+								<li>Código Piloto.</li>
+								<li>Nome Piloto.</li>
+								<li>Qtde Voltas Completadas.</li>
+								<li>Tempo Total de Prova.</li>
+								<li>A melhor volta da corrida.</li>
+								<li>A posição dos pilotos.</li>
+								<li>A velocidade média de cada piloto.</li>
+								<li>A melhor volta de cada piloto.</li>
+								<li>A distância dos demais pilotos para o primeiro colocado.</li>
+							</ul>
+							<br>
+							<p>
+								Para o funcionamento do programa, os dados do arquivo devem estar separados por espaço e no formato abaixo:
+							</p>
+							<br>
+							<div class="card-content col-md-12">
+								<table class="table" style="font-size:14pt !important">
+									<thead>
+									<tr>
+										<th>Hora</th>
+										<th>Piloto</th>
+										<th>Nº Volta</th>
+										<th>Tempo Volta</th>
+										<th>Velocidade média da volta</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>23:49:08.277</td>
+										<td>038 – F.MASSA</td>
+										<td>1</td>
+										<td>1:02.852</td>
+										<td>44,275</td>
+									</tr>
+									<tr>
+										<td>hh:mm:ss.fff</td>
+										<td>Código piloto - Nome Piloto</td>
+										<td>Número Inteiro</td>
+										<td>mm:ss.fff</td>
+										<td>Número Decimal</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<br>
+						<p>
+							Para realizar a importação do seu arquivo clique no icone ao lado ou navegue através do menu
+							<a href="/uploadFile"><i class="fa fa-file" style="font-size:38px"></i></a>
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+
+	<%include ../common/footer %>
+
+</html>

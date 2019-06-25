@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+	<% include ../common/head %>
+	<% include ../common/header %>
+
+	<body>
+		<main style="margin-top: 3%">
+			<div class="row">
+				<div class="col-md-9 offset-md-1">
+					<div class="card col-md-12 offset-md-1">
+						<div class="card-title center">
+							 <h4><i class="fa fa-bars"></i><b> Rancking</b></h4>
+						</div>
+							<div class="card-content col-md-12">
+							<div class="row">
+								<h6 style="text-align: center;"> Melhor volta: <%= bestLap.lap %>° - Tempo: <%= bestLap.time %> - <i class="fa fa-user" style="font-size:14px"></i> Piloto <%= bestLap.namePilot %></h6>
+							</div>
+							<% if ( msgErro != '' && msgErro != null) { %>
+							<div class="col-md-6 offset-md-3">
+							<div class="row">
+								<h5 style="text-align:center !important;">
+									<span class="badge badge-pill badge-dark"><i class="fa fa-info" style ="color:white !important"></i></span>
+									 <%= msgErro %>
+								 </h5>
+							</div>
+						</div>
+							<% } %>
+
+									<div class="card-content col-md-12">
+										<table class="table" style="font-size:14pt !important">
+											<thead>
+												<tr>
+													<th>Posição Chegada</th>
+													<th>Código Piloto</th>
+													<th>Nome Piloto</th>
+													<th>Qtd. Voltas Completadas</th>
+													<th>Melhor Volta</th>
+													<th>Velocidade Média</th>
+													<th>Tempo Total de Prova</th>
+													<th>Diferença do Vencedor</th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<% pilots.forEach(item => { %>
+												<tr>
+													<td><%= item.position %></td>
+													<td><%= item.codPilot %></td>
+													<td><%= item.namePilot %></td>
+													<td><%= item.laps %></td>
+													<td><%= item.bestLap %></td>
+													<td><%= item.averageSpeed %></td>
+													<td><%= item.timeLap %></td>
+													<td>	<% if (item.difference == 0 ) { %> Vencedor  <% }else{ %> <%= item.difference %> <% }%></td>
+												</tr>
+												<% }) %>
+											</tbody>
+										</table>
+									</div>
+								</li>
+
+							</ul>
+							<!-- /lista de pilotos -->
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</main>
+	</body>
+
+	<%include ../common/footer %>
+
+</html>
