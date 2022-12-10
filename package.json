@@ -17,7 +17,7 @@
     "chai-http": "^4.2.1",
     "consign": "^0.1.6",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "formidable": "^1.2.1",
     "jquery": "^3.4.1",
     "mocha": "^5.2.0",
